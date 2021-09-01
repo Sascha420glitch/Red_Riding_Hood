@@ -17,7 +17,7 @@ public class PlayerCombatController : MonoBehaviour
    
    private float lastInputTime = Mathf.NegativeInfinity;
 
-	private float[] attackDetails = new float[2];
+   private float[] attackDetails = new float[2];
    
    private Animator anim;
    

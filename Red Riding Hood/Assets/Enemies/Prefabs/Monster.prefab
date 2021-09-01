@@ -238,6 +238,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   knockbackSpeed: {x: 10, y: 5}
+  hitParticle: {fileID: 3700436112725040061, guid: d04176cdefa7ad34083e95598ac04ad1, type: 3}
+  deathChunkParticle: {fileID: 1276734573685329718, guid: 6b89135f110416047b457c26a4bf1fe6, type: 3}
+  deathBloodParticle: {fileID: 8697558341255477492, guid: 2c1109b1e07ce3247b54ba461bdb2085, type: 3}
 --- !u!1 &8879351828651733358
 GameObject:
   m_ObjectHideFlags: 0
