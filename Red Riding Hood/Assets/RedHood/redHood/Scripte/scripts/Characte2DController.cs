@@ -13,6 +13,8 @@ public class Characte2DController : MonoBehaviour
 	private bool isGrounded;
 	private bool canJump;
 	private bool canFlip;
+	private bool canMove;
+	
 	
 	private Rigidbody2D rb;
 	private Animator anim;
@@ -22,6 +24,8 @@ public class Characte2DController : MonoBehaviour
 	public float movementSpeed = 10.0f;
 	public float jumpForce = 16.0f;
 	public float groundCheckRadius;
+	
+	
 	
 	public Transform groundCheck;
 	
@@ -126,7 +130,7 @@ public class Characte2DController : MonoBehaviour
 	}
 	
 	private void ApplyMovement()
-	{
+	{		
 		rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
 	}
 	
@@ -144,7 +148,7 @@ public class Characte2DController : MonoBehaviour
 	private void Flip()
 	{
 		isFacingRight = !isFacingRight;
-		transform.Rotate(0.0f, 180.0f, 0.0f);
+		transform.Rotate(0.0f, 180.0f, 0.0f);	
 	}
 	
 	
@@ -152,5 +156,6 @@ public class Characte2DController : MonoBehaviour
 	{
 		Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 	}
+	
 	
 }
