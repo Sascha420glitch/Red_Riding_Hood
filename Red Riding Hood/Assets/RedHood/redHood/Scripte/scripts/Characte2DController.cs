@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Characte2DController : MonoBehaviour
 {
 	private float movementInputDirection;
 	
 	private int amountOfJumpsLeft;
+	private int rockCounter;
+	private int superRockCounter;
 	
 	private bool isFacingRight = true;
 	private bool isRunning;
@@ -28,7 +31,8 @@ public class Characte2DController : MonoBehaviour
 	
 	
 	public Transform groundCheck;
-	
+	public Text scoreText;
+	public Text bigRock;
 	public LayerMask whatIsGround;
 	
 	//Start is called before the first frame update
@@ -38,6 +42,8 @@ public class Characte2DController : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent <Animator>();
 		amountOfJumpsLeft = amountOfJumps;
+		rockCounter = 0;
+		superRockCounter = 0;
 	}
 	
 	
@@ -151,11 +157,22 @@ public class Characte2DController : MonoBehaviour
 		transform.Rotate(0.0f, 180.0f, 0.0f);	
 	}
 	
-	
 	private void OnDrawGizmos ()
 	{
 		Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 	}
 	
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.tag == "Rock")
+		{
+			rockCounter = rockCounter + 1;
+			Destroy(other.gameObject);
+			scoreText.text = "Rocks: " + rockCounter;
+			Debug.Log("Rock: " + rockCounter);
+		}
+		
+		
 	
+	}
 }
