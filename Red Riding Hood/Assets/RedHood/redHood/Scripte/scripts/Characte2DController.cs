@@ -9,7 +9,6 @@ public class Characte2DController : MonoBehaviour
 	
 	private int amountOfJumpsLeft;
 	private int rockCounter;
-	private int superRockCounter;
 	
 	private bool isFacingRight = true;
 	private bool isRunning;
@@ -32,8 +31,8 @@ public class Characte2DController : MonoBehaviour
 	
 	public Transform groundCheck;
 	public Text scoreText;
-	public Text bigRock;
 	public LayerMask whatIsGround;
+	
 	
 	//Start is called before the first frame update
 	
@@ -43,7 +42,6 @@ public class Characte2DController : MonoBehaviour
 		anim = GetComponent <Animator>();
 		amountOfJumpsLeft = amountOfJumps;
 		rockCounter = 0;
-		superRockCounter = 0;
 	}
 	
 	
@@ -167,8 +165,8 @@ public class Characte2DController : MonoBehaviour
 		if(other.tag == "Rock")
 		{
 			rockCounter = rockCounter + 1;
-			Destroy(other.gameObject);
 			scoreText.text = "Rocks: " + rockCounter;
+			Destroy(other.gameObject);
 			Debug.Log("Rock: " + rockCounter);
 		}
 		
