@@ -170,6 +170,11 @@ public class Characte2DController : MonoBehaviour
 			Debug.Log("Rock: " + rockCounter);
 		}
 		
+			if(rockCounter  == 5)
+		{
+			scoreText.text = "MISSION ROCKED!";
+		}
+		
 		
 	
 	}
