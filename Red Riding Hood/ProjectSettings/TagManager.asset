@@ -44,6 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 261623049
+    locked: 0
+  - name: CaveBG
+    uniqueID: 1593058109
+    locked: 0
   - name: Enemy
     uniqueID: 196344739
+    locked: 0
+  - name: Middleground
+    uniqueID: 784233025
+    locked: 0
+  - name: Forground
+    uniqueID: 717923241
     locked: 0
