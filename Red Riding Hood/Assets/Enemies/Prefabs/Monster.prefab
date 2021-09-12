@@ -292,7 +292,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 784233025
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 10
 --- !u!1 &8879351828651733358
 GameObject:
   m_ObjectHideFlags: 0
